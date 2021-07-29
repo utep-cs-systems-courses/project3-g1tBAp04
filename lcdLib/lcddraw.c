@@ -7,28 +7,47 @@
 int xoff = 45;
 int yoff = 40;
 
-void move_shape_Left(int x){
+void move_shape_Left(u_int x){
   shapedraw(COLOR_WHITE);
   xoff -=x; 
 }
 
-void move_shape_Down(int y){
+void move_shape_Down(u_int y){
   shapedraw(COLOR_WHITE);
   yoff +=y; 
 }
 
-void move_shape_Up(int y){
+void move_shape_Up(u_int y){
   shapedraw(COLOR_WHITE);
   yoff -=y; 
 }
 
-void move_shape_Right(int x){
+void move_shape_Right(u_int x){
   shapedraw(COLOR_WHITE);
   xoff +=x; 
 }
 
 void shapedraw(u_int color){
 
+  fillRectangle(xoff+10,yoff+30, 50, 20, color);  fillRectangle(xoff+30,yoff+10, 20, 50, color);
+
+  int xlefty = xoff;
+  int xrighty = xoff+50;
+
+  int ylefty=+50;
+  int yrighty=yoff;
+
+  for(int r=0; r<25; r++){
+    for(int c=0;c<=r;c++){
+  
+  //left shift
+      drawPixel(xoff-c,yoff+r,color);
+      drawPixel(xoff-c,yoff-r,color);
+  //right shift
+      drawPixel(xoff+c,yoff-r,color);
+      drawPixel(xoff+c,yoff+r,color);
+    }
+  }
 }
 
 
