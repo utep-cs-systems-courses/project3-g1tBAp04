@@ -4,6 +4,33 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+int xoff = 45;
+int yoff = 40;
+
+void move_shape_Left(int x){
+  shapedraw(COLOR_WHITE);
+  xoff -=x; 
+}
+
+void move_shape_Down(int y){
+  shapedraw(COLOR_WHITE);
+  yoff +=y; 
+}
+
+void move_shape_Up(int y){
+  shapedraw(COLOR_WHITE);
+  yoff -=y; 
+}
+
+void move_shape_Right(int x){
+  shapedraw(COLOR_WHITE);
+  xoff +=x; 
+}
+
+void shapedraw(u_int color){
+
+}
+
 
 /** Draw single pixel at x,row 
  *
