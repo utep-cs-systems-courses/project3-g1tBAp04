@@ -1,5 +1,6 @@
 #include <msp430.h>
 #include "switches.h"
+#include "stateMachines.h"
 #include "led.h"
 
 char state =0;

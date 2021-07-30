@@ -9,9 +9,9 @@
 char interruptTime;
 char button_four;
 
-void blink_button_advance(char blink_count) //functions normal light  
+void blink_button_advance() //functions normal light  
 {
-  shapedraw(COLOR_WHITE);
+  shapedraw(COLOR_BLUE);
    char changed = 0;
 
    if(state == 1){

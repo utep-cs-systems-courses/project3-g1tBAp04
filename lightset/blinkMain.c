@@ -7,14 +7,14 @@
 #include "../lcdLib/lcdutils.h"
 #include "../lcdLib/lcddraw.h"
 
-short redrawscreen =1;
+short redrawScreen =1;
 
 int main(void) {
   configureClocks();		/* setup master oscillator, CPU & peripheral clocks */
   led_init();
   switch_init();
   buzzer_init();
-  shapedraw(COLOR_WHITE);
+  shapedraw(COLOR_GREEN);
   buzzer_set_period(0);
   enableWDTInterrupts();/* enable periodic interrupt */
 
