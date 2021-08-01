@@ -16,7 +16,7 @@ run.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o blinkMain.o buzzer.o switches.
 
 #.o files
 switches.o: switches.h 
-stateMachines.o: led.h stateMachines.h
+stateMachines.o: stateMachines.s stateMachines.h
 led.o: led_s.s led.h
 buzzer.o: buzzer.h
 
